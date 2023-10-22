@@ -63,7 +63,7 @@ export default function ListProducts() {
       <div className="products">
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         <Row>
-          {products.map((product) => (
+          {products?.map((product) => (
             <Col key={product._id} sm={6} md={4} lg={3} className="mb-3">
               <ProductCard product={product}></ProductCard>
             </Col>
