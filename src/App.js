@@ -59,21 +59,21 @@ function App() {
           {" "}
           <div>
             {" "}
-            <Nav className="flex-column text-white w-100 p-">
-              <Nav.Item>
-                <strong>Categories</strong>
-              </Nav.Item>
-              {categories?.map((category) => (
-                <Nav.Item key={category}>
-                  <Link
-                    className="sidebar-link"
-                    to={`/category/?query=${category}`}
-                  >
-                    {category}
-                  </Link>
-                </Nav.Item>
-              ))}
-            </Nav>
+            // <Nav className="flex-column text-white w-100 p-">
+            //   <Nav.Item>
+            //     <strong>Categories</strong>
+            //   </Nav.Item>
+            //   {categories?.map((category) => (
+            //     <Nav.Item key={category}>
+            //       <Link
+            //         className="sidebar-link"
+            //         to={`/category/?query=${category}`}
+            //       >
+            //         {category}
+            //       </Link>
+            //     </Nav.Item>
+            //   ))}
+            // </Nav>
             <Button
               className="toggle-sidebar"
               onClick={() => setIsOpen(!isOpen)}
