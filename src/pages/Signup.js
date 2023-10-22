@@ -39,7 +39,7 @@ export default function SignUpPage() {
     try {
       // Send a POST request to create a new user
       const { data } = await axios.post(
-        "/api/users/signup",
+        "https://server-e-commerce-txaw.onrender.com/api/users/signup",
         {
           name,
           email,
