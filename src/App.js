@@ -36,52 +36,50 @@ function App() {
 
   const [categories, setCategories] = useState([]);
 
-  // useEffect(() => {
-  //   const fetchCategories = async () => {
-  //     try {
-  //       const { data } = await axios.get(
-  //         `https://server-e-commerce-txaw.onrender.com/api/products/api/products/categories`
-  //       );
-  //       setCategories(data);
-  //     } catch (err) {
-  //       toast.error(getError(err)); // Display // an error toast if fetching categories fails
-  //     }
-  //   };
-  //   fetchCategories();
-  // }, []);
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const { data } = await axios.get(
+          `https://server-e-commerce-txaw.onrender.com/api/products/api/products/categories`
+        );
+        setCategories(data);
+      } catch (err) {
+        toast.error(getError(err)); // Display an error toast if fetching categories fails
+      }
+    };
+    fetchCategories();
+  }, []);
 
   return (
     <>
       <BrowserRouter>
         <NavigationBar />
         <ToastContainer position="bottom-center" limit={1} />
-        //  <div className={isOpen ? "sidebar active-sidebar" : "sidebar"}>
-        //   {" "}
-        //   <div>
-        //     {" "}
-        //     <Nav className="flex-column text-white w-100 p-">
-        //       <Nav.Item>
-        //         <strong>Categories</strong>
-        //       </Nav.Item>
-        //       {categories.map((category) => (
-        //         <Nav.Item key={category}>
-        //           <Link
-        //             className="sidebar-link"
-        //             to={`/category/?query=${category}`}
-        //           >
-        //             {category}
-        //           </Link>
-        //         </Nav.Item>
-        //       ))}
-        //     </Nav>
-        //     <Button
-        //       className="toggle-sidebar"
-        //       onClick={() => setIsOpen(!isOpen)}
-        //     >
-        //       <i class="fa-solid fa-arrows-rotate"></i>
-        //     </Button>{" "}
-        //   </div>
-        // </div> 
+        <div className={isOpen ? "sidebar active-sidebar" : "sidebar"}>
+          <div>
+            <Nav className="flex-column text-white w-100 p-">
+              <Nav.Item>
+                <strong>Categories</strong>
+              </Nav.Item>
+              {categories.map((category) => (
+                <Nav.Item key={category}>
+                  <Link
+                    className="sidebar-link"
+                    to={`/category/?query=${category}`}
+                  >
+                    {category}
+                  </Link>
+                </Nav.Item>
+              ))}
+            </Nav>
+            <Button
+              className="toggle-sidebar"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <i className="fa-solid fa-arrows-rotate"></i>
+            </Button>{" "}
+          </div>
+        </div>
         <div className={isOpen ? "active-container" : "normal-container"}>
           <div className="d-flex flex-column site-container">
             <Container>
