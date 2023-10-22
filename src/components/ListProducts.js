@@ -20,14 +20,14 @@ export default function ListProducts() {
       );
 
       // Filter out products that are already in the 'products' array
-      const newProducts = result.data.products.filter((product) => {
-        return !products.some(
-          (existingProduct) => existingProduct._id === product._id
-        );
-      });
+      // const newProducts = result.data.products.filter((product) => {
+      //   return !products.some(
+      //     (existingProduct) => existingProduct._id === product._id
+      //   );
+      // });
 
       // Update 'products' state with the new products
-      setProducts((prevProducts) => [...prevProducts, ...newProducts]);
+      setProducts(result.data.products);
     } catch (error) {
       setError(error.message);
     }
