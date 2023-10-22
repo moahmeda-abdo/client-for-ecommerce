@@ -44,7 +44,7 @@ function App() {
         );
         setCategories(data);
       } catch (err) {
-        toast.error(getError(err)); // Display an error toast if fetching categories fails
+        toast.error(getError(err)); // Display / an error toast if fetching categories fails
       }
     };
     fetchCategories();
