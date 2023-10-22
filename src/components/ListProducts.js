@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ProductCard from "../components/ProductCard";
 import MessageBox from "../components/MessageBox";
-// import newRequest from "../newRequest"
+import file from "../file";
 export default function ListProducts() {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(20);
@@ -16,10 +16,10 @@ export default function ListProducts() {
   const fetchProducts = async () => {
     try {
       const result = await axios.get(
-        `https://server-e-commerce-txaw.onrender.com/api/products?page=${page}&pageSize=${pageSize}`
+        `/api/products?page=${page}&pageSize=${pageSize}`
       );
-// const result = await newRequest.get("/api/products")
-      // Filter out products that are already in the 'products' array
+
+      // // Filter out products that are already in the 'products' array
       // const newProducts = result.data.products.filter((product) => {
       //   return !products.some(
       //     (existingProduct) => existingProduct._id === product._id
@@ -48,15 +48,15 @@ export default function ListProducts() {
   // Fetch products when the component mounts and when page or page size changes
   useEffect(() => {
     fetchProducts();
-  }, [page, pageSize]);
+  }, []);
 
   // Add and remove scroll event listener
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [page]);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [page]);
 
   return (
     <main>
