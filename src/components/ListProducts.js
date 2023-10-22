@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ProductCard from "../components/ProductCard";
 import MessageBox from "../components/MessageBox";
-
+import newRequest from "./newRequest"
 export default function ListProducts() {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(20);
@@ -15,10 +15,10 @@ export default function ListProducts() {
   // Function to fetch products from the server
   const fetchProducts = async () => {
     try {
-      const result = await axios.get(
-        `/api/products?page=${page}&pageSize=${pageSize}`
-      );
-
+      // const result = await axios.get(
+      //   `/api/products?page=${page}&pageSize=${pageSize}`
+      // );
+const result = await newRequest.get("/api/products")
       // Filter out products that are already in the 'products' array
       // const newProducts = result.data.products.filter((product) => {
       //   return !products.some(
