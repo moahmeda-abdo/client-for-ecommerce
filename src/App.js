@@ -55,7 +55,7 @@ function App() {
       <BrowserRouter>
         <NavigationBar />
         <ToastContainer position="bottom-center" limit={1} />
-        {/* <div className={isOpen ? "sidebar active-sidebar" : "sidebar"}>
+         <div className={isOpen ? "sidebar active-sidebar" : "sidebar"}>
           {" "}
           <div>
             {" "}
@@ -67,7 +67,7 @@ function App() {
                 <Nav.Item key={category}>
                   <Link
                     className="sidebar-link"
-                    to={`/category/?query=${category}`}
+                    to={`https://server-e-commerce-txaw.onrender.com/api/products/category/?query=${category}`}
                   >
                     {category}
                   </Link>
@@ -81,7 +81,7 @@ function App() {
               <i class="fa-solid fa-arrows-rotate"></i>
             </Button>{" "}
           </div>
-        </div> */}
+        </div> 
         <div className={isOpen ? "active-container" : "normal-container"}>
           <div className="d-flex flex-column site-container">
             <Container>
