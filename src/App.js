@@ -40,7 +40,7 @@ function App() {
     const fetchCategories = async () => {
       try {
         const { data } = await axios.get(
-          `/api/products/categories`
+          `https://server-e-commerce-txaw.onrender.com/api/products/api/products/categories`
         );
         setCategories(data);
       } catch (err) {
@@ -67,7 +67,7 @@ function App() {
                 <Nav.Item key={category}>
                   <Link
                     className="sidebar-link"
-                    to={`https://server-e-commerce-txaw.onrender.com/api/products/category/?query=${category}`}
+                    to={`/category/?query=${category}`}
                   >
                     {category}
                   </Link>
