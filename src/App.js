@@ -87,7 +87,7 @@ function App() {
             <Container>
               <Routes>
                 <Route
-                  path="https://client-for-ecommerce-ns4i.vercel.app/"
+                  path="/"
                   element={<HomePage />}
                 />
                 <Route path="/products/:slug" element={<ProductPage />} />
