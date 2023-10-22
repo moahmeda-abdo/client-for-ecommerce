@@ -34,16 +34,16 @@ export default function ListProducts() {
   };
 
   // Function to handle scrolling and trigger more product loading
-  const handleScroll = () => {
-    if (
-      document.documentElement.scrollHeight -
-        window.innerHeight -
-        document.documentElement.scrollTop <=
-      700
-    ) {
-      setPage(page + 1);
-    }
-  };
+  // const handleScroll = () => {
+  //   if (
+  //     document.documentElement.scrollHeight -
+  //       window.innerHeight -
+  //       document.documentElement.scrollTop <=
+  //     700
+  //   ) {
+  //     setPage(page + 1);
+  //   }
+  // };
 
   // Fetch products when the component mounts and when page or page size changes
   useEffect(() => {
