@@ -16,7 +16,7 @@ export default function ListProducts() {
   const fetchProducts = async () => {
     try {
       const result = await axios.get(
-        `/api/products?page=${page}&pageSize=${pageSize}`
+        `https://server-e-commerce-txaw.onrender.com/api/products?page=${page}&pageSize=${pageSize}`
       );
 
       // // Filter out products that are already in the 'products' array
