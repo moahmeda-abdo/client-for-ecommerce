@@ -100,7 +100,7 @@ function App() {
                 <Route path="/order/:id" element={<OrderPage />} />
                 <Route path="/search" element={<SearchPage />} />
                 <Route path="/category" element={<CategoryPage />} />
-                <Route path="*" element={<PageNotFound />} />
+               // <Route path="*" element={<PageNotFound />} />
                 <Route
                   path="/orderhistory"
                   element={
