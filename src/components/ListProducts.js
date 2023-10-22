@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ProductCard from "../components/ProductCard";
 import MessageBox from "../components/MessageBox";
-import file from "../file";
+
 export default function ListProducts() {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(20);
