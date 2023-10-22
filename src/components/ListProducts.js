@@ -12,7 +12,7 @@ export default function ListProducts() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // Function to fetch products from the server
+  // Function to fetch products from the server/
   const fetchProducts = async () => {
     try {
       const result = await axios.get(
