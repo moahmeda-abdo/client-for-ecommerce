@@ -55,33 +55,33 @@ function App() {
       <BrowserRouter>
         <NavigationBar />
         <ToastContainer position="bottom-center" limit={1} />
-        // <div className={isOpen ? "sidebar active-sidebar" : "sidebar"}>
-        //   {" "}
-        //   <div>
-        //     {" "}
-        //     // <Nav className="flex-column text-white w-100 p-">
-        //     //   <Nav.Item>
-        //     //     <strong>Categories</strong>
-        //     //   </Nav.Item>
-        //     //   {categories?.map((category) => (
-        //     //     <Nav.Item key={category}>
-        //     //       <Link
-        //     //         className="sidebar-link"
-        //     //         to={`/category/?query=${category}`}
-        //     //       >
-        //     //         {category}
-        //     //       </Link>
-        //     //     </Nav.Item>
-        //     //   ))}
-        //     // </Nav>
-        //     <Button
-        //       className="toggle-sidebar"
-        //       onClick={() => setIsOpen(!isOpen)}
-        //     >
-        //       <i class="fa-solid fa-arrows-rotate"></i>
-        //     </Button>{" "}
-        //   </div>
-        // </div>
+        {/* <div className={isOpen ? "sidebar active-sidebar" : "sidebar"}>
+          {" "}
+          <div>
+            {" "}
+            <Nav className="flex-column text-white w-100 p-">
+              <Nav.Item>
+                <strong>Categories</strong>
+              </Nav.Item>
+              {categories.map((category) => (
+                <Nav.Item key={category}>
+                  <Link
+                    className="sidebar-link"
+                    to={`/category/?query=${category}`}
+                  >
+                    {category}
+                  </Link>
+                </Nav.Item>
+              ))}
+            </Nav>
+            <Button
+              className="toggle-sidebar"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <i class="fa-solid fa-arrows-rotate"></i>
+            </Button>{" "}
+          </div>
+        </div> */}
         <div className={isOpen ? "active-container" : "normal-container"}>
           <div className="d-flex flex-column site-container">
             <Container>
@@ -100,7 +100,7 @@ function App() {
                 <Route path="/order/:id" element={<OrderPage />} />
                 <Route path="/search" element={<SearchPage />} />
                 <Route path="/category" element={<CategoryPage />} />
-               // <Route path="*" element={<PageNotFound />} />
+                <Route path="*" element={<PageNotFound />} />
                 <Route
                   path="/orderhistory"
                   element={
