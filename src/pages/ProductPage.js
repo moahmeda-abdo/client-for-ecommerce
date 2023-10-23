@@ -67,7 +67,7 @@ export default function ProductPage() {
     }
     try {
       const { data } = await axios.post(
-        `/api/products/${product._id}/reviews`,
+        `https://server-e-commerce-txaw.onrender.com/api/products/${product._id}/reviews`,
         { rating, comment, name: userInfo.name },
         {
           headers: { Authorization: `Bearer ${userInfo.token}` },
@@ -100,7 +100,7 @@ export default function ProductPage() {
       dispatch({ type: "FETCH_REQUEST" });
 
       try {
-        const result = await axios.get(`/api/products/slug/${slug}`);
+        const result = await axios.get(`https://server-e-commerce-txaw.onrender.com/api/products/slug/${slug}`);
         dispatch({ type: "FETCH_SUCCESS", payload: result.data });
       } catch (error) {
         dispatch({ type: "FETCH_FAIL", payload: getError(error) });
