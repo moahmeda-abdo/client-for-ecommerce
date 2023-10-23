@@ -51,7 +51,7 @@ export default function OrderPage() {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const { data } = await axios.get(
-          `/api/orders/${orderId}`,
+          `https://server-e-commerce-txaw.onrender.com/api/orders/${orderId}`,
           {
             // Include the user's authorization token in the request headers
             headers: { authorization: `Bearer ${userInfo.token}` },
