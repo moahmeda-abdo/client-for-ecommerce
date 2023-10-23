@@ -30,7 +30,7 @@ export default function SignInPage() {
     try {
       // Send a POST request to sign in the user
       const { data } = await axios.post(
-        "/api/users/signin",
+        "https://server-e-commerce-txaw.onrender.com/api/users/signin",
         {
           email,
           password,
