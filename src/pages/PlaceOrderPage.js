@@ -51,7 +51,7 @@ export default function PlaceOrderPage() {
 
       // Create a new order
       const { data } = await axios.post(
-        "/api/orders",
+        "https://server-e-commerce-txaw.onrender.com/api/orders",
         {
           orderItems: cart.cartItems,
           shippingAddress: cart.shippingAddress,
