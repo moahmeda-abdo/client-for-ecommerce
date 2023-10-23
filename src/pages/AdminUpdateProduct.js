@@ -62,7 +62,7 @@ export default function AdminUpdateProduct() {
       dispatch({ type: "UPDATE_REQUEST" });
       // Send a PUT request to update the product
       await axios.put(
-        `/api/products/${productId}`,
+        `https://server-e-commerce-txaw.onrender.com/api/products/${productId}`,
         {
           _id: productId,
           name,
