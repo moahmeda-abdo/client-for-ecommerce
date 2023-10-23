@@ -20,7 +20,7 @@ function ProductCard(props) {
 
     // Fetch the product's details from the server
     const { data } = await axios.get(
-      `/api/products/${item._id}`
+      `https://server-e-commerce-txaw.onrender.com/api/products/${item._id}`
     );
 
     // Check if the product is out of stock
