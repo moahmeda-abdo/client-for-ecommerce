@@ -42,7 +42,7 @@ export default function OrderHistoryScreen() {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const { data } = await axios.get(
-          `/api/orders/orderhistory`,
+          `https://server-e-commerce-txaw.onrender.com/api/orders/orderhistory`,
           // Include the user's authorization token in the request headers
           { headers: { Authorization: `Bearer ${userInfo.token}` } }
         );
