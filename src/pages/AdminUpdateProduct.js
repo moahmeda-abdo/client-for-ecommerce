@@ -189,6 +189,7 @@ export default function AdminUpdateProduct() {
             <Form.Label>Description</Form.Label>
             <Form.Control
               value={description}
+       as="textarea"
               onChange={(e) => setDescription(e.target.value)}
               required
             />
