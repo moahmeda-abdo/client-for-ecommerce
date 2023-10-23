@@ -29,7 +29,7 @@ export default function CartPage() {
   const updateCartHandler = async (item, quantity) => {
     // Fetch product data from the API to check if it's in stock
     const { data } = await axios.get(
-      `/api/products/${item._id}`
+      `https://server-e-commerce-txaw.onrender.com/api/products/${item._id}`
     );
 
     // Check if the requested quantity exceeds the available stock
