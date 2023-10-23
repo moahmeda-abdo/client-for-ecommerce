@@ -25,7 +25,7 @@ export default function AdminListOrders() {
   const fetchData = async () => {
     try {
       const { data } = await axios.get(
-        `api/orders/ordersList?page=${page}&pageSize=${pageSize}`,
+        `https://server-e-commerce-txaw.onrender.com/api/orders/ordersList?page=${page}&pageSize=${pageSize}`,
         {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         }
