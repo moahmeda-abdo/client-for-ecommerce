@@ -40,7 +40,7 @@ function App() {
     const fetchCategories = async () => {
       try {
         const { data } = await axios.get(
-          `https://server-e-commerce-txaw.onrender.com/api/products/api/products/categories`
+          `https://server-e-commerce-txaw.onrender.com/api/products/categories`
         );
         setCategories(data);
       } catch (err) {
