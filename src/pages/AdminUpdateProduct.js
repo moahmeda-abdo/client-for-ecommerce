@@ -95,7 +95,7 @@ export default function AdminUpdateProduct() {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const { data } = await axios.get(
-          `/api/products/${productId}`
+          `https://server-e-commerce-txaw.onrender.com/api/products/${productId}`
         );
         setName(data.name);
         setSlug(data.slug);
