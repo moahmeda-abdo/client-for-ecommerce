@@ -43,7 +43,7 @@ export default function AdminListUsers() {
     if (confirmed) {
       try {
         // Send a request to delete the user
-        const { response } = await axios.delete(`/api/users/${userId}`, {
+        const { response } = await axios.delete(`https://server-e-commerce-txaw.onrender.com/api/users/${userId}`, {
           headers: { authorization: `Bearer ${userInfo.token}` },
         });
         setTimeout(function () {
@@ -70,7 +70,7 @@ export default function AdminListUsers() {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const { data } = await axios.get(
-          `/api/users`,
+          `https://server-e-commerce-txaw.onrender.com/api/users`,
           {
             headers: { Authorization: `Bearer ${userInfo.token}` },
           }
