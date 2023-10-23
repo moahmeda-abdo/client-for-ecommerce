@@ -79,7 +79,7 @@ export default function PlaceOrderPage() {
 
       // Update product stock
       const { updateproduct } = await axios.put(
-        "/api/products/updateproduct",
+        "https://server-e-commerce-txaw.onrender.com/api/products/updateproduct",
         {
           products: productData,
         }
