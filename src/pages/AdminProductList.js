@@ -42,7 +42,7 @@ export default function AdminProductList() {
     if (confirmed) {
       try {
         // Send a request to delete the product
-        const { response } = await axios.delete(`/api/products/${productId}`, {
+        const { response } = await axios.delete(`https://server-e-commerce-txaw.onrender.com/api/products/${productId}`, {
           headers: { authorization: `Bearer ${userInfo.token}` },
         });
         setTimeout(function () {
@@ -69,7 +69,7 @@ export default function AdminProductList() {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const { data } = await axios.get(
-          "/api/products/admin",
+          "https://server-e-commerce-txaw.onrender.com/api/products/admin",
           {
             headers: { authorization: `Bearer ${userInfo.token}` },
           }
