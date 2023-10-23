@@ -53,7 +53,7 @@ export default function SearchPage() {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `/api/products/search?page=${page}&query=${query}`
+          `https://server-e-commerce-txaw.onrender.com/api/products/search?page=${page}&query=${query}`
         );
         dispatch({ type: "FETCH_SUCCESS", payload: data });
       } catch (err) {
